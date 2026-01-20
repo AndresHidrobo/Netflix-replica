@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetStream - Your Movie Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Landing Page -->
+    <div id="landingPage" class="landing-page">
+        <div class="landing-content">
+            <div class="logo-icon">🎬</div>
+            <h1>NETSTREAM</h1>
+            <p class="subtitle">Unlimited movies, TV shows, and more. Watch anywhere. Cancel anytime.</p>
+            <div>
+                <button class="btn btn-primary" onclick="showPage('login')">Sign In</button>
+                <button class="btn btn-secondary" onclick="showPage('register')">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Page -->
+    <div id="registerPage" class="form-page hidden">
+        <div class="form-container">
+            <h2>Register</h2>
+            <div id="registerError" class="error-message hidden"></div>
+            <div class="input-group">
+                <input type="email" id="registerEmail" placeholder="Email" />
+            </div>
+            <div class="input-group">
+                <input type="password" id="registerPassword" placeholder="Password" />
+            </div>
+            <div class="input-group">
+                <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" />
+            </div>
+            <button class="btn btn-primary btn-full" onclick="handleRegister()">Register</button>
+            <a href="#" class="back-link" onclick="showPage('landing'); return false;">Back to Landing</a>
+        </div>
+    </div>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="form-page hidden">
+        <div class="form-container">
+            <h2>Sign In</h2>
+            <div id="loginError" class="error-message hidden"></div>
+            <div class="input-group">
+                <input type="email" id="loginEmail" placeholder="Email" />
+            </div>
+            <div class="input-group">
+                <input type="password" id="loginPassword" placeholder="Password" />
+            </div>
+            <button class="btn btn-primary btn-full" onclick="handleLogin()">Sign In</button>
+            <a href="#" class="back-link" onclick="showPage('landing'); return false;">Back to Landing</a>
+        </div>
+    </div>
+
+    <!-- Profiles Page -->
+    <div id="profilesPage" class="profiles-page hidden">
+        <div class="profiles-container">
+            <h1>Who's watching?</h1>
+            <div id="profilesGrid" class="profiles-grid"></div>
+            <div id="addProfileForm" class="add-profile-form hidden">
+                <input type="text" id="newProfileName" placeholder="Profile Name" />
+                <button class="btn btn-primary" onclick="handleAddProfile()">Add</button>
+                <button class="btn btn-secondary" onclick="toggleAddProfile()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="homePage" class="home-page hidden">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="navbar-logo">🎬</div>
+                <div class="navbar-brand">NETSTREAM</div>
+            </div>
+            <div class="navbar-right">
+                <span id="currentProfileName" class="profile-info"></span>
+                <button class="btn btn-primary btn-logout" onclick="handleLogout()">
+                    <span>🚪</span>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </nav>
+        <div class="content">
+            <h2 class="section-title">Popular Movies</h2>
+            <div id="moviesGrid" class="movies-grid"></div>
+            <div id="favoritesSection" class="hidden">
+                <h2 class="section-title">My List</h2>
+                <div id="favoritesGrid" class="movies-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

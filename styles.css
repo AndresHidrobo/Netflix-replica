@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Landing Page */
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.landing-content {
+    max-width: 600px;
+}
+
+.logo-icon {
+    font-size: 80px;
+    color: #e50914;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 12px 32px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #e50914;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c4070f;
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+/* Form Pages */
+.form-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+}
+
+.input-group input:focus {
+    outline: 2px solid #e50914;
+}
+
+.error-message {
+    background-color: #e50914;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #999;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+/* Profiles Page */
+.profiles-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profiles-container {
+    text-align: center;
+}
+
+.profiles-container h1 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+.profiles-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.profile-card:hover {
+    transform: scale(1.1);
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    background-color: #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 60px;
+}
+
+.profile-card:hover .profile-avatar {
+    background-color: #444;
+}
+
+.profile-name {
+    color: #999;
+}
+
+.profile-card:hover .profile-name {
+    color: white;
+}
+
+.add-profile-avatar {
+    background-color: #1a1a1a;
+}
+
+.profile-card:hover .add-profile-avatar {
+    background-color: #2a2a2a;
+}
+
+.add-profile-form {
+    margin-top: 40px;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.add-profile-form input {
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Home Page */
+.home-page {
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #1a1a1a;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-logo {
+    font-size: 30px;
+    color: #e50914;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-info {
+    color: #999;
+}
+
+.content {
+    padding: 40px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.movie-card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-poster {
+    height: 200px;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: #333;
+}
+
+.movie-info {
+    padding: 20px;
+}
+
+.movie-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-meta {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.movie-description {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-favorite {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-favorite.active {
+    background-color: #e50914;
+}
+
+.btn-favorite:not(.active) {
+    background-color: #333;
+}
+
+.heart-icon {
+    font-size: 16px;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
